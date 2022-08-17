@@ -1,0 +1,312 @@
+body{
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    counter-reset: game;
+}
+
+input:checked {
+    counter-increment: game;
+}
+.total-count::after {
+    content: counter(game);
+}
+
+.phone{
+    position: relative;
+    border: 8px solid black;
+    border-radius: 40px;
+    height: 600px;
+    width: 300px;
+    background-color: #ccefff;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22) ;
+}
+
+
+input[type=checkbox] {
+    position: relative;
+    appearance: none;
+    cursor: pointer;
+    width: 100%;
+    height: 80px;
+    margin: 0;
+    top: 0;
+    z-index: 2;
+}
+input[type=checkbox]:focus{
+    appearance: none;
+    outline: none;
+}
+  
+input:checked {
+    counter-increment: game;
+}
+
+
+.layer-1 {
+    position: absolute;
+    z-index: 1;
+    height: 450px;
+    width: 80px;
+    bottom: 0;
+    right: 60px;
+    animation-name: layer;
+    animation-duration: 1.4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+
+.layer-1 input[type=checkbox] {
+    animation-duration: 1s;
+}
+
+.layer-2{
+    position: absolute;
+    z-index: 2;
+    height: 450px;
+    width: 80px;
+    bottom: 0;
+    left: 60px;
+    animation: layer 1.2s ease-in-out infinite;
+    /* animation-duration: 1.5s; */
+}
+
+
+
+.layer-4{
+    position: absolute;
+    z-index: 4;
+    height: 345px;
+    width: 80px;
+    bottom: 0;
+    left: 20px;
+    animation: layer .65s ease-in-out infinite;
+    /* animation-duration: .5s; */
+}
+
+
+.layer-6{
+    position: absolute;
+    z-index: 6;
+    height: 250px;
+    width: 80px;
+    bottom: 0;
+    right: 32px;
+    animation: layer 1.5s ease-in-out infinite;
+    /* animation-duration: 2s; */
+}
+
+
+  
+
+@keyframes layer{
+    0%{
+        bottom: 0;
+    }
+    25%{
+        bottom: -60px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+@keyframes blink {
+    0% {
+      height: 4px;
+    }
+    5% {
+      height: 1px;
+      transform: translateY(2px);
+    }
+    10% {
+      height: 4px;
+      transform: translateY(0);
+  
+    }
+}
+
+
+
+
+.layer-3{
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    height: 410px;
+    width: 220px;
+    margin: 0 auto;
+    bottom: 0;
+    background-color: #7b502f;
+    opacity: 1;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #7b502f 10px ), 
+    repeating-linear-gradient( #4c221355, #4c2213 );
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+
+.layer-3--inside{
+    position: absolute;
+    width: 220px;
+    height: 25px;
+    background-color: #0db914;
+    opacity: 0.9;
+    background-image:  linear-gradient(135deg, #45841a 25%, transparent 25%), linear-gradient(225deg, #45841a 25%, transparent 25%), linear-gradient(45deg, #45841a 25%, transparent 25%), linear-gradient(315deg, #45841a 25%, #0db914 25%);
+    background-position:  10px 0, 10px 0, 0 0, 0 0;
+    background-size: 20px 20px;
+    background-repeat: repeat;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+
+}   
+
+.layer-5{
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    left: 0;
+    height: 300px;
+    width: 200px;
+    background-color: #7b502f;
+    opacity: 1;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #7b502f 10px ), repeating-linear-gradient( #4c221355, #4c2213 );
+    -webkit-box-shadow: 20px -9px 14px -11px rgba(0,0,0,0.73);
+    -moz-box-shadow: 20px -9px 14px -11px rgba(0,0,0,0.73);
+    box-shadow: 20px -9px 14px -11px rgba(0,0,0,0.73);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 30px;
+}
+.layer-5--inside{
+    position: absolute;
+    width: 200px;
+    height: 25px;
+    background-color: #0db914;
+    opacity: 0.9;
+    background-image:  linear-gradient(135deg, #45841a 25%, transparent 25%), linear-gradient(225deg, #45841a 25%, transparent 25%), linear-gradient(45deg, #45841a 25%, transparent 25%), linear-gradient(315deg, #45841a 25%, #0db914 25%);
+    background-position:  10px 0, 10px 0, 0 0, 0 0;
+    background-size: 20px 20px;
+    background-repeat: repeat;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+
+.layer-7{
+    position: absolute;
+    z-index: 7;
+    height: 200px;
+    width: 160px;
+    background-color: #7b502f;
+    opacity: 1;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #7b502f 10px ), repeating-linear-gradient( #4c221355, #4c2213 );
+    bottom: 0;
+    right: 0;
+    -webkit-box-shadow: -14px 9px 20px -8px rgba(0,0,0,0.73);
+-moz-box-shadow: -14px 9px 20px -8px rgba(0,0,0,0.73);
+box-shadow: -14px 9px 20px -8px rgba(0,0,0,0.73);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 30px;
+}
+.layer-7--inside{
+    position: absolute;
+    width: 160px;
+    height: 25px;
+    background-color: #0db914;
+    opacity: 0.9;
+    background-image:  linear-gradient(135deg, #45841a 25%, transparent 25%), linear-gradient(225deg, #45841a 25%, transparent 25%), linear-gradient(45deg, #45841a 25%, transparent 25%), linear-gradient(315deg, #45841a 25%, #0db914 25%);
+    background-position:  10px 0, 10px 0, 0 0, 0 0;
+    background-size: 20px 20px;
+    background-repeat: repeat;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+
+
+
+
+
+
+
+
+.left-ear--outer{
+    background-color: white;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    left: 10px;
+    top: 0;
+}
+
+.left-ear--inner{
+    background-color: pink;
+    border-radius: 90%;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    left: 15px;
+    top: 8px;
+}
+.right-ear--outer{
+    background-color: white;
+    border-radius: 90%;
+    top: 0;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    right: 10px;
+}
+.right-ear--inner{
+    background-color: pink;
+    border-radius: 90%;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    right: 15px;
+    top: 8px;
+}
+.head{
+    background-color: white;
+    border-radius: 50%;
+    height: 80px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: absolute;
+    top: 25px;
+    width: 100%;
+}
+.head__eye{
+    background-color: black;
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 9px;
+
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+}
+
+
+.head__eye--left{
+    left: 28px;
+}
+.head__eye--right{
+    right: 28px;
+}
+
+.total-count{
+    text-align: center;
+    font-size: 20px;
+}
